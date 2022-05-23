@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import ProductList from './pages/ProductList';
 
-function App() {
+function App () {
   return (
     <BrowserRouter>
       <Switch>
@@ -12,4 +12,4 @@ function App() {
   );
 }
 
-export default App;
+export default App
