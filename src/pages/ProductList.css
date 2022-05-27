@@ -1,6 +1,15 @@
-.product-list-header {
+h1 {
   text-align: center;
-  margin: 10px;
+}
+.product-list-section {
+  margin: 30px;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+}
+
+.product-list-section div {
+  margin: 0 auto;
 }
 
 .input-field {
@@ -8,11 +17,10 @@
   height: 40px;
   margin: 20px auto;
   padding: 0 50px;
-  width: 40%;
   font-size: larger;
 }
 
-.product-list-header i {
+.product-list-section i {
   color: rgb(45, 50, 118);
   cursor: pointer;
   min-width: 30px;
@@ -20,7 +28,7 @@
   position: absolute;
 }
 
-.product-list-header a {
+.product-list-section a {
   color: rgb(45, 50, 118);
   text-decoration: inherit;
   padding: 10px;
@@ -28,4 +36,17 @@
 
 p {
   padding: 10px;
+}
+
+aside {
+  border: 2px solid black;
+  border-radius: 10px;
+  margin: 0 10px;
+  padding: 10px;
+  width: 20%;
+}
+
+label {
+  display: flex;
+  padding: 5px;
 }
