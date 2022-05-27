@@ -1,0 +1,26 @@
+.cart-shopping-header {
+  padding: 10px;
+}
+
+.cart-shopping-header div {
+  margin: 20px 50px;
+  text-align: center;
+}
+
+.cart-shopping-header a {
+  color: rgb(45, 50, 118);
+  padding: 20px;
+  text-decoration: inherit;
+}
+
+.cart-shopping-header i {
+  color: rgb(45, 50, 118);
+}
+
+section {
+  text-align: center;
+}
+
+section i {
+  color: rgb(45, 50, 118);
+}
