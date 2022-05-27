@@ -1,0 +1,31 @@
+.product-list-header {
+  text-align: center;
+  margin: 10px;
+}
+
+.input-field {
+  border-radius: 15px;
+  height: 40px;
+  margin: 20px auto;
+  padding: 0 50px;
+  width: 40%;
+  font-size: larger;
+}
+
+.product-list-header i {
+  color: rgb(45, 50, 118);
+  cursor: pointer;
+  min-width: 30px;
+  padding: 42px 8px;
+  position: absolute;
+}
+
+.product-list-header a {
+  color: rgb(45, 50, 118);
+  text-decoration: inherit;
+  padding: 10px;
+}
+
+p {
+  padding: 10px;
+}
