@@ -35,12 +35,6 @@ class ProductList extends React.Component {
           <h1>Front-end Online Store</h1>
         </header>
         <section className="product-list-section">
-          <div>
-            <i className="fa fa-search fa-2xl" />
-            <input className="input-field" type="text" />
-            <Link to="/cart-shopping" className="fa fa-cart-shopping fa-2xl" />
-            <p>Digite algum termo de pesquisa ou escolha uma categoria.</p>
-          </div>
           <aside className="product-categories">
           <h3>Categorias:</h3>
           { categories.map((category, index) => (
@@ -55,6 +49,12 @@ class ProductList extends React.Component {
             </label>
           ))}
         </aside>
+        <div>
+            <i className="fa fa-search fa-2xl" />
+            <input className="input-field" type="text" />
+            <Link to="/cart-shopping" className="fa fa-cart-shopping fa-2xl" />
+            <p>Digite algum termo de pesquisa ou escolha uma categoria.</p>
+          </div>
         </section>
       </>
     )
