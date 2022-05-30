@@ -1,31 +1,144 @@
 .product-list-header {
+  align-items: center;
+  background-color: rgb(45, 50, 118);
+  color: white;
+  display: flex;
+  height: 80px;
+  justify-content: center;
+}
+
+h1 {
   text-align: center;
-  margin: 10px;
+}
+.product-list-section {
+  margin: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.product-list-section div {
+  margin: 0 auto;
 }
 
 .input-field {
   border-radius: 15px;
   height: 40px;
-  margin: 20px auto;
+  margin: 0px auto;
   padding: 0 50px;
-  width: 40%;
   font-size: larger;
 }
 
-.product-list-header i {
+.product-list-section i {
   color: rgb(45, 50, 118);
   cursor: pointer;
   min-width: 30px;
-  padding: 42px 8px;
+  padding: 22px 8px;
   position: absolute;
 }
 
-.product-list-header a {
+.product-list-section a {
   color: rgb(45, 50, 118);
   text-decoration: inherit;
   padding: 10px;
 }
 
+section button {
+  display: none;
+}
+
 p {
   padding: 10px;
+}
+
+aside {
+  border: 3px solid rgb(45, 50, 118);;
+  border-radius: 10px;
+  margin: 0 10px;
+  padding: 10px;
+  width: 20%;
+}
+
+aside h3 {
+  color: rgb(45, 50, 118);
+}
+
+label {
+  display: flex;
+  padding: 5px;
+}
+
+@media screen and (max-width: 768px) {
+  h1 {
+    text-align: center;
+  }
+
+  section button {
+    background-color: rgb(45, 50, 118);
+    border: 0px;
+    border-radius: 10px;
+    color: white;
+    display: block;
+    font-weight: 800;
+    margin: 20px;
+    max-width: 40%;
+    padding: 10px;
+  }
+  
+  .product-list-section {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin: 30px;
+  }
+  
+  .product-list-section div {
+    margin: 0 auto;
+  }
+  
+  .input-field {
+    border-radius: 15px;
+    height: 40px;
+    margin: 0px auto;
+    padding: 0 50px;
+    font-size: larger;
+    width: 50%;
+  }
+  
+  .product-list-section i {
+    color: rgb(45, 50, 118);
+    cursor: pointer;
+    min-width: 30px;
+    padding: 25px 8px;
+    position: absolute;
+  }
+  
+  .product-list-section a {
+    color: rgb(45, 50, 118);
+    text-decoration: inherit;
+    padding: 10px;
+  }
+  
+  p {
+    padding: 10px;
+  }
+  
+  aside {
+    border: 2px solid black;
+    border-radius: 10px;
+    margin: 0 auto 30px auto;
+    padding: 10px;
+    width: 80%;
+    display: none;
+  }
+  
+  label {
+    padding: 5px;
+    display: inline-block;
+  }
+
+  div a {
+    margin: 20px;
+  }
 }
