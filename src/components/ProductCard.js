@@ -32,6 +32,7 @@ class ProductCard extends React.Component {
           >
             Ver Detalhes
         </Link>
+        <button>Adicionar ao Carrinho</button>
       </div>
     )
   }
