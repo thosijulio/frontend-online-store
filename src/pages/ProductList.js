@@ -43,7 +43,7 @@ class ProductList extends React.Component {
     const { state: { categories } } = this;
     return (
       <>
-        <header>
+        <header className="product-list-header">
           <h1>Front-end Online Store</h1>
         </header>
         <section className="product-list-section">

@@ -1,20 +1,29 @@
 .cart-shopping-header {
-  padding: 10px;
+  align-items: center;
+  background-color: rgb(45, 50, 118);
+  display: flex;
+  flex-direction: column;
+  height: 80px;
+  margin-bottom: 50px;
 }
 
 .cart-shopping-header div {
-  margin: 20px 50px;
-  text-align: center;
+  color: #fff;
+  margin: 22px;
+  position: absolute;
 }
 
 .cart-shopping-header a {
-  color: rgb(45, 50, 118);
-  padding: 20px;
+  align-self: flex-start;
+  color: white;
+  margin: 10px 10px;
+  padding: 10px;
+  position: absolute;
   text-decoration: inherit;
 }
 
 .cart-shopping-header i {
-  color: rgb(45, 50, 118);
+  color: white;
 }
 
 section {
@@ -23,4 +32,24 @@ section {
 
 section i {
   color: rgb(45, 50, 118);
+}
+
+@media screen and (max-width: 768px) {
+  .cart-shopping-header {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .cart-shopping-header div {
+    position: static;
+    margin: auto 10px;
+    text-align: center;
+  }
+
+  .cart-shopping-header a {
+    position: static;
+    margin: auto 0;
+  }
 }
