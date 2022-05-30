@@ -1,14 +1,19 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import './ProductCard.css';
+import { Link } from 'react-router-dom';
 
 class ProductCard extends React.Component {
   constructor() {
     super();
+    this.handleClick = this.handleClick.bind(this);
   }
+  handleClick() {
+    localStorage.setItem('product', JSON.stringify(this.props.product))
+  }
+
   render() {
     const { product } = this.props;
-    console.log(product);
     return (
       <div className="product-card">
         <h5>{ product.title }</h5>
@@ -21,6 +26,12 @@ class ProductCard extends React.Component {
               )
           }
         </p>
+        <Link
+          onClick={ this.handleClick }
+          to={`/product/${product.id}`}
+          >
+            Ver Detalhes
+        </Link>
       </div>
     )
   }
@@ -28,6 +39,7 @@ class ProductCard extends React.Component {
 
 ProductCard.propTypes = {
   product: PropTypes.shape({
+    id: PropTypes.string,
     title: PropTypes.string,
     thumbnail: PropTypes.string,
     price: PropTypes.string,
