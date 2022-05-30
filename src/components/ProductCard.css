@@ -1,0 +1,20 @@
+.product-card {
+  border: 3px solid rgb(45, 50, 118);
+  border-radius: 10px;
+  width: 300px;
+  height: 300px;
+}
+
+.product-card h5 {
+  background-color: rgb(45, 50, 118);
+  color: white;
+  height: 50px;
+  text-align: center;
+  padding: 10px 8px;
+}
+
+.product-card img {
+  margin: 20px 0;
+  width: 50%;
+  height: 50%;
+}

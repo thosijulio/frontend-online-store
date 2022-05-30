@@ -10,15 +10,15 @@
 h1 {
   text-align: center;
 }
-.product-list-section {
+.product-search-section {
   margin: 30px;
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
 }
 
-.product-list-section div {
-  margin: 0 auto;
+.product-search-section div {
+  margin: 20px auto;
 }
 
 .input-field {
@@ -29,7 +29,7 @@ h1 {
   font-size: larger;
 }
 
-.product-list-section i {
+.product-search-section i {
   color: rgb(45, 50, 118);
   cursor: pointer;
   min-width: 30px;
@@ -37,10 +37,24 @@ h1 {
   position: absolute;
 }
 
-.product-list-section a {
+.product-search-section a {
   color: rgb(45, 50, 118);
   text-decoration: inherit;
   padding: 10px;
+}
+
+.product-list-section {
+  display: flex;
+  margin: 30px;
+  flex-wrap: wrap;
+}
+
+.product-list-section i {
+  margin: auto;
+}
+
+.products-search-and-list {
+  display: row;
 }
 
 section button {
@@ -54,6 +68,7 @@ p {
 aside {
   border: 3px solid rgb(45, 50, 118);;
   border-radius: 10px;
+  height: fit-content;
   margin: 0 10px;
   padding: 10px;
   width: 20%;
@@ -81,11 +96,11 @@ label {
     display: block;
     font-weight: 800;
     margin: 20px;
-    max-width: 40%;
+    max-width: 50%;
     padding: 10px;
   }
   
-  .product-list-section {
+  .product-search-section {
     align-items: center;
     display: flex;
     flex-direction: column;
@@ -93,7 +108,7 @@ label {
     margin: 30px;
   }
   
-  .product-list-section div {
+  .product-search-section div {
     margin: 0 auto;
   }
   
@@ -106,7 +121,7 @@ label {
     width: 50%;
   }
   
-  .product-list-section i {
+  .product-search-section i {
     color: rgb(45, 50, 118);
     cursor: pointer;
     min-width: 30px;
@@ -114,7 +129,7 @@ label {
     position: absolute;
   }
   
-  .product-list-section a {
+  .product-search-section a {
     color: rgb(45, 50, 118);
     text-decoration: inherit;
     padding: 10px;
