@@ -44,9 +44,13 @@ h1 {
 }
 
 .product-list-section {
-  margin: 30px;
   display: flex;
+  margin: 30px;
   flex-wrap: wrap;
+}
+
+.product-list-section i {
+  margin: auto;
 }
 
 .products-search-and-list {

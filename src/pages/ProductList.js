@@ -9,6 +9,7 @@ class ProductList extends React.Component {
     super();
     this.state = {
       categories: [],
+      loading: false,
       message: 'Digite algum termo de pesquisa ou escolha uma categoria.',
       products: [],
       search: '',
@@ -28,18 +29,29 @@ class ProductList extends React.Component {
   }
 
   async handleSearch() {
+    this.setState({
+      loading: true,
+    });
+
     const { products, search, selectedCategory } = this.state;
     const { results } = await getProductsFromCategoryAndQuery(selectedCategory, search);
     
     this.setState({
-      products: results,
+      loading: false,
       message: results.length ? '' : 'Nenhum produto foi encontrado.',
+      products: results,
     });
   }
 
-  handleSearchInput(search) {
+  handleSearchInput(event) {
+    if (event.key === 'Enter') {
+      this.handleSearch();
+    }
+
+    const { target: { value } } = event;
+    
     this.setState({
-      search,
+      search: value,
     });
   }
 
@@ -62,7 +74,7 @@ class ProductList extends React.Component {
   }
 
   render() {
-    const { state: { categories, message, products, search } } = this;
+    const { state: { categories, loading, message, products, search } } = this;
     return (
       <>
         <header className="product-list-header">
@@ -88,16 +100,20 @@ class ProductList extends React.Component {
             <i className="fa fa-search fa-2xl" onClick={ this.handleSearch }/>
             <input
               className="input-field"
-              onChange={ ({ target: { value } }) => this.handleSearchInput(value)}
+              onChange={ (event) => this.handleSearchInput(event) }
+              onKeyUp={ (event) => this.handleSearchInput(event) }
               type="text"
               value={ search }
             />
             <Link to="/cart-shopping" className="fa fa-cart-shopping fa-2xl" />
             <p>{ message }</p>
             <section className="product-list-section">
-              { products.map((product, index) => (
-                <ProductCard key={ index } product={ product } />
-              ))}
+              { loading ?
+                <i className="fas fa-spinner fa-spin fa-6x" /> :
+                products.map((product, index) => (
+                 <ProductCard key={ index } product={ product } />
+                ))
+              }
             </section>
           </div>
         </section>
