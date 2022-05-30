@@ -23,7 +23,10 @@ class ProductDetails extends React.Component {
               )}` }
           </h4>
           <div className="product-image-and-specifications">
-            <img alt="product-image" src={ product.thumbnail } />
+            <img
+              alt="product-image"
+              src={ `https://http2.mlstatic.com/D_NQ_NP_932305-${product.thumbnail_id}-O.webp` }
+            />
             <div>
               <h5>
                 Especificações:
