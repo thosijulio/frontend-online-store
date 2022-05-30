@@ -27,6 +27,18 @@ class ProductList extends React.Component {
     })
   }
 
+  showCategories(button) {
+    const categories = document.getElementsByClassName('product-categories')[0];
+
+    if (categories.style.display === 'block') {
+      button.textContent = 'Mostrar Categorias';
+      categories.style.display = 'none';
+    } else {
+      button.textContent = 'Ocultar Categorias';
+      categories.style.display = 'block';
+    }
+  }
+
   render() {
     const { state: { categories } } = this;
     return (
@@ -35,13 +47,14 @@ class ProductList extends React.Component {
           <h1>Front-end Online Store</h1>
         </header>
         <section className="product-list-section">
+          <button onClick={ ({ target }) => this.showCategories(target) }>Mostrar Categorias</button>
           <aside className="product-categories">
           <h3>Categorias:</h3>
           { categories.map((category, index) => (
             <label key={index}>
               <input
                 name="selected-category"
-                onClick={({ target: { value } }) => this.changeSelectedCategory(value)}
+                onClick={ ({ target: { value } } ) => this.changeSelectedCategory(value)}
                 type="radio"
                 value={category.id}
               />
