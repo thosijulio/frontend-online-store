@@ -103,6 +103,7 @@ label {
     margin: 0px auto;
     padding: 0 50px;
     font-size: larger;
+    width: 50%;
   }
   
   .product-list-section i {
