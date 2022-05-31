@@ -5,7 +5,6 @@ import './ProductDetails.css';
 class ProductDetails extends React.Component {
   render() {
     const product = JSON.parse(localStorage.getItem('product'));
-    console.log(product);
 
     return (
       <>
