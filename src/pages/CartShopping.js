@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import CartItens from '../components/CartItens';
 import EmptyCart from '../components/EmptyCart';
 import './CartShopping.css';
 
@@ -32,7 +33,7 @@ class CartShopping extends React.Component {
           </div>
         </header>
         <section>
-          { cart ? <EmptyCart /> : null }
+          { cart ? <CartItens cart={cart}/> : <EmptyCart /> }
         </section>
       </>
     )
