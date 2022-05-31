@@ -33,7 +33,7 @@ class CartShopping extends React.Component {
           </div>
         </header>
         <section>
-          { cart ? <CartItens cart={cart}/> : <EmptyCart /> }
+          { cart ? <CartItens /> : <EmptyCart /> }
         </section>
       </>
     )
