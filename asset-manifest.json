@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/frontend-online-store/static/css/main.48fb78d9.css",
+    "main.js": "/frontend-online-store/static/js/main.91990de7.js",
+    "index.html": "/frontend-online-store/index.html",
+    "main.48fb78d9.css.map": "/frontend-online-store/static/css/main.48fb78d9.css.map",
+    "main.91990de7.js.map": "/frontend-online-store/static/js/main.91990de7.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.48fb78d9.css",
+    "static/js/main.91990de7.js"
+  ]
+}
