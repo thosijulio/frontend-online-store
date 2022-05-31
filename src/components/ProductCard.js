@@ -19,8 +19,12 @@ class ProductCard extends React.Component {
 
     try {
       const cart = JSON.parse(localStorage.getItem('cart'));
-      cart.push(product);
-      localStorage.setItem('cart', JSON.stringify(cart));      
+      if (!cart.some((iten) => iten.id === product.id)) {
+        cart.push(product);
+        localStorage.setItem('cart', JSON.stringify(cart));      
+      } else {
+        alert('Item já adicionado.');
+      }
     } catch (error) {
       localStorage.setItem('cart', JSON.stringify([product]));
     }

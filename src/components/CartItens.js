@@ -61,6 +61,16 @@ class CartItens extends React.Component {
     }
   }
 
+  handleRemove(itentoRemove) {
+    this.setState((oldState) => ({
+      cart: oldState.cart.filter((iten) => iten.id !== itentoRemove.id),
+    }),
+      () => {
+        localStorage.setItem('cart', JSON.stringify(this.state.cart));
+      },
+    );
+  }
+
   render() {
     const { state: { cart } } = this;
 
@@ -74,6 +84,7 @@ class CartItens extends React.Component {
                 .toLocaleString('pt-br', {style: 'currency', currency: 'BRL'})
             }
           </p>
+          <p>Qtde.</p>
           <i
             className="fa-solid fa-minus"
             onClick={ () => this.handleQuantity(cart, iten, 'minus') }
@@ -83,13 +94,13 @@ class CartItens extends React.Component {
             className="fa-solid fa-plus"
             onClick={ () => this.handleQuantity(cart, iten, 'plus') }
           />
-          <p>Qtde.</p>
           <p>
             {
               `Valor total: ${(iten.totalPrice)
                 .toLocaleString('pt-br', {style: 'currency', currency: 'BRL'})}`
             }
           </p>
+          <i className="fa-solid fa-trash" onClick={ () => this.handleRemove(iten) }/>
         </div>
       )
     )
