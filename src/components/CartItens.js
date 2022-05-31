@@ -1,4 +1,5 @@
 import React from 'react';
+import EmptyCart from './EmptyCart';
 
 class CartItens extends React.Component {
   constructor(props) {
@@ -74,7 +75,7 @@ class CartItens extends React.Component {
   render() {
     const { state: { cart } } = this;
 
-    return cart.map((iten, index) => (
+    return cart.length ? cart.map((iten, index) => (
         <div key={ index }>
           <img alt="product" src={iten.thumbnail} />
           <p>{iten.title}</p>
@@ -103,7 +104,7 @@ class CartItens extends React.Component {
           <i className="fa-solid fa-trash" onClick={ () => this.handleRemove(iten) }/>
         </div>
       )
-    )
+    ) : <EmptyCart />
   }
 }
 

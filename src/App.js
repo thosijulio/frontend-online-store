@@ -7,7 +7,7 @@ import './App.css';
 
 function App () {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={ process.env.PUBLIC_URL }>
       <Switch>
         <Route path="/cart-shopping" component={ CartShopping } />
         <Route path="/product/:id" component={ ProductDetails } />
