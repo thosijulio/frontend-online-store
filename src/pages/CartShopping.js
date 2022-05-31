@@ -1,9 +1,29 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import CartItens from '../components/CartItens';
+import EmptyCart from '../components/EmptyCart';
 import './CartShopping.css';
 
 class CartShopping extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      cart: [],
+    };
+  }
+  componentDidMount() {
+    try {
+      const cart = JSON.parse(localStorage.getItem('cart'));
+      this.setState({
+        cart,
+      })
+    } catch (error) {
+      
+    }
+  }
+
   render() {
+    const { state: { cart } } = this;
     return(
       <>
         <header className="cart-shopping-header">
@@ -13,8 +33,7 @@ class CartShopping extends React.Component {
           </div>
         </header>
         <section>
-          <i className="fa-solid fa-box-open fa-8x"/>
-          <p>Seu carrinho está vazio.</p>
+          { cart.length ? <CartItens /> : <EmptyCart /> }
         </section>
       </>
     )
