@@ -6,12 +6,15 @@ import { Link } from 'react-router-dom';
 class ProductCard extends React.Component {
   constructor() {
     super();
-    this.handleClick = this.handleClick.bind(this);
+    this.state = {
+      buttonCartText: 'Adicionar ao carrinho',
+    };
+    this.seeDetails = this.seeDetails.bind(this);
     this.addToCart = this.addToCart.bind(this);
   }
   
-  handleClick() {
-    localStorage.setItem('product', JSON.stringify(this.props.product))
+  seeDetails() {
+    localStorage.setItem('product', JSON.stringify(this.props.product));
   }
 
   addToCart() {
@@ -21,7 +24,8 @@ class ProductCard extends React.Component {
       const cart = JSON.parse(localStorage.getItem('cart'));
       if (!cart.some((iten) => iten.id === product.id)) {
         cart.push(product);
-        localStorage.setItem('cart', JSON.stringify(cart));      
+        localStorage.setItem('cart', JSON.stringify(cart));
+        this.setState({ buttonCartText: 'Item adicionado' });
       } else {
         alert('Item já adicionado.');
       }
@@ -30,27 +34,38 @@ class ProductCard extends React.Component {
     }
   }
 
+  checkProductTitle(title) {
+    if (title.length > 40) {
+      return `${title.substring(0, 40)}...`;
+    } else {
+      return title;
+    }
+  }
+
   render() {
-    const { product } = this.props;
+    const {
+      props: { product: { title, thumbnail, price, id} },
+      state: { buttonCartText } } = this;
+
     return (
       <div className="product-card">
-        <h5>{ product.title }</h5>
-        <img src={ product.thumbnail }/>
+        <h5 title={ title }>{ this.checkProductTitle(title) }</h5>
+        <img src={ thumbnail }/>
         <p>
           {
-            (product.price)
+            (price)
               .toLocaleString(
                 'pt-br', { style: 'currency', currency: 'BRL'}
               )
           }
         </p>
         <Link
-          onClick={ this.handleClick }
-          to={`/product/${product.id}`}
+          onClick={ this.seeDetails }
+          to={`/product/${id}`}
           >
             Ver Detalhes
         </Link>
-        <button onClick={ this.addToCart }>Adicionar ao Carrinho</button>
+        <button onClick={ this.addToCart }>{ buttonCartText }</button>
       </div>
     )
   }

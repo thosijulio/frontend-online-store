@@ -1,159 +1,160 @@
 .product-list-header {
   align-items: center;
-  background-color: rgb(45, 50, 118);
+  background-color: #4c5760;
   color: white;
   display: flex;
   height: 80px;
   justify-content: center;
 }
 
-h1 {
+.product-list-header h1 {
   text-align: center;
+  background-color: #4c5760;
 }
+
 .product-search-section {
-  margin: 30px;
+  margin: 0 auto;
   display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
+  flex-direction: column;
+  justify-content: center;
+  padding: 40px 0;
 }
 
-.product-search-section div {
-  margin: 20px auto;
+.product-search-section p {
+  margin: 0 0 20px 0;
 }
 
-.input-field {
-  border-radius: 15px;
-  height: 40px;
-  margin: 0px auto;
-  padding: 0 50px;
-  font-size: larger;
-}
-
-.product-search-section i {
-  color: rgb(45, 50, 118);
+.product-input-search i {
+  color: #4C5760;
   cursor: pointer;
-  min-width: 30px;
-  padding: 22px 8px;
+  margin: 22px 450px 0 0;
   position: absolute;
 }
 
-.product-search-section a {
-  color: rgb(45, 50, 118);
+.product-input-search a {
+  color: #4C5760;
   text-decoration: inherit;
-  padding: 10px;
+  margin: 22px 0 0 550px;
+  position: absolute;
+}
+
+.product-search-section p {
+  color: #4C5760;
+  font-size: medium;
+  font-weight: 500;
+}
+
+.product-input-search {
+  display: flex;
+  justify-content: center;
+}
+
+.input-field {
+  border: 2px solid black;
+  border-radius: 15px;
+  height: 40px;
+  padding: 0 50px;
+  font-size: larger;
+  width: 400px;
+}
+
+.input-field:hover, .input-field:focus {
+  outline: 1px solid #93A8AC;
+}
+
+.product-categories-section {
+  align-self: center;
+  margin: 20px auto;
+  font-size: medium;
+  font-weight: 500;
+}
+
+
+.product-categories-section label {
+  display: block;
+}
+
+#product-categories:hover, #product-categories:focus {
+  outline: 1px solid #93A8AC;
+}
+
+.product-categories-section select {
+  border-radius: 15px;
+  border: 2px solid black;
+  padding: 0 3px;
 }
 
 .product-list-section {
   display: flex;
-  margin: 30px;
+  margin: 30px 20px;
   flex-wrap: wrap;
-}
-
-.product-list-section i {
-  margin: auto;
-}
-
-.products-search-and-list {
-  display: row;
-}
-
-section button {
-  display: none;
-}
-
-p {
-  padding: 10px;
-}
-
-aside {
-  border: 3px solid rgb(45, 50, 118);;
-  border-radius: 10px;
-  height: fit-content;
-  margin: 0 10px;
-  padding: 10px;
-  width: 20%;
-}
-
-aside h3 {
-  color: rgb(45, 50, 118);
-}
-
-label {
-  display: flex;
-  padding: 5px;
+  justify-content: center;
 }
 
 @media screen and (max-width: 768px) {
-  h1 {
-    text-align: center;
+  .product-list-header {
+    height: 40px;
   }
 
-  section button {
-    background-color: rgb(45, 50, 118);
-    border: 0px;
-    border-radius: 10px;
-    color: white;
-    display: block;
-    font-weight: 800;
-    margin: 20px;
-    max-width: 50%;
-    padding: 10px;
+  .product-list-header h1 {
+    font-size: large;
+    font-weight: 600;
   }
-  
-  .product-search-section {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    margin: 30px;
-  }
-  
-  .product-search-section div {
-    margin: 0 auto;
-  }
-  
+
   .input-field {
     border-radius: 15px;
-    height: 40px;
-    margin: 0px auto;
-    padding: 0 50px;
-    font-size: larger;
-    width: 50%;
+    height: 20px;
+    width: 300px;
+    font-size: small;
+    text-align: left;
   }
   
-  .product-search-section i {
-    color: rgb(45, 50, 118);
-    cursor: pointer;
-    min-width: 30px;
-    padding: 25px 8px;
-    position: absolute;
+  .product-input-search i {
+    padding: 19px 0px;
+    font-size: medium;
   }
   
   .product-search-section a {
     color: rgb(45, 50, 118);
+    font-size: large;
     text-decoration: inherit;
-    padding: 10px;
+    margin: 10px;
   }
   
-  p {
-    padding: 10px;
-  }
-  
-  aside {
-    border: 2px solid black;
-    border-radius: 10px;
-    margin: 0 auto 30px auto;
-    padding: 10px;
-    width: 80%;
-    display: none;
-  }
-  
-  label {
-    padding: 5px;
-    display: inline-block;
+  .input-field {
+    padding: 0 30px;
   }
 
-  div a {
-    margin: 20px;
+
+  .product-search-section p {
+    font-size: xx-small;
+    font-weight: 500;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .input-field {
+    width: 150px;
+    font-size: xx-small;
+  }
+
+  .product-categories-section label {
+    font-size: x-small;
+  }
+
+  .product-categories-section select {
+    font-size: xx-small;
+  }
+
+  .product-input-search i {
+    padding: 20px 0px;
+    font-size: medium;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .product-input-search i {
+    padding: 13px 0;
+    font-size: small;
   }
 }

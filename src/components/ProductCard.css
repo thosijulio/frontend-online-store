@@ -1,9 +1,10 @@
 .product-card {
   align-items: center;
-  border: 3px solid rgb(45, 50, 118);
-  border-radius: 10px;
-  display: inline-block;
-  height: 450px;
+  border: 2px solid rgb(45, 50, 118);
+  border-radius: 20px;
+  height: 350px;
+  margin: 15px 30px;
+  overflow: hidden;
   width: 200px;
 }
 
@@ -11,8 +12,9 @@
   background-color: rgb(45, 50, 118);
   color: white;
   text-align: center;
-  padding: 10px 8px;
-  height: 50px;
+  height: 40px;
+  padding: 10px 10px;
+  text-align: center;
 }
 
 .product-card img {
@@ -27,9 +29,10 @@
   border-radius: 10px;
   color: white !important;
   display: block;
-  font-weight: 800;
+  font-size: small;
+  font-weight: 500;
   margin: 10px auto;
-  width: 50%;
+  width: 100px;
   padding: 10px;
   text-decoration: inherit;
   cursor: pointer;
