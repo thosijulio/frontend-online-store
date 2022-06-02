@@ -8,8 +8,9 @@
 }
 
 .product-list-header h1 {
-  text-align: center;
   background-color: #4c5760;
+  color: white;
+  text-align: center;
 }
 
 .product-search-section {
@@ -21,6 +22,9 @@
 }
 
 .product-search-section p {
+  color: #4C5760;
+  font-size: large;
+  font-weight: 600;
   margin: 0 0 20px 0;
 }
 
@@ -38,12 +42,6 @@
   position: absolute;
 }
 
-.product-search-section p {
-  color: #4C5760;
-  font-size: medium;
-  font-weight: 500;
-}
-
 .product-input-search {
   display: flex;
   justify-content: center;
@@ -52,9 +50,11 @@
 .input-field {
   border: 2px solid black;
   border-radius: 15px;
+  color: #4c5760;
+  font-size: large;
+  font-weight: 600;
   height: 40px;
   padding: 0 50px;
-  font-size: larger;
   width: 400px;
 }
 
@@ -65,12 +65,13 @@
 .product-categories-section {
   align-self: center;
   margin: 20px auto;
-  font-size: medium;
-  font-weight: 500;
 }
 
 
 .product-categories-section label {
+  color: #4c5760;
+  font-size: large;
+  font-weight: 600;
   display: block;
 }
 
@@ -81,14 +82,27 @@
 .product-categories-section select {
   border-radius: 15px;
   border: 2px solid black;
+  color: #4C5760;
+  font-weight: 600;
+  height: 30px;
   padding: 0 3px;
+  width: 300px;
 }
 
+.product-categories-section select option {
+  color: #4C5760;
+  font-weight: 600;
+}
 .product-list-section {
+  background-color: #D7CEB2;
   display: flex;
-  margin: 30px 20px;
+  padding: 30px 20px;
   flex-wrap: wrap;
   justify-content: center;
+}
+
+.product-list-section i {
+  color: #4C5760;
 }
 
 @media screen and (max-width: 768px) {
@@ -110,15 +124,13 @@
   }
   
   .product-input-search i {
-    padding: 19px 0px;
+    margin: 12px 330px 0 0;
     font-size: medium;
   }
   
   .product-search-section a {
-    color: rgb(45, 50, 118);
     font-size: large;
-    text-decoration: inherit;
-    margin: 10px;
+    margin: 12px 0 0 390px;
   }
   
   .input-field {
