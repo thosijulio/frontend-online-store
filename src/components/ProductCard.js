@@ -12,6 +12,16 @@ class ProductCard extends React.Component {
     this.seeDetails = this.seeDetails.bind(this);
     this.addToCart = this.addToCart.bind(this);
   }
+
+  componentDidMount() {
+    try {
+      const products = JSON.parse(localStorage.getItem('cart'));
+      const { props: { product } } = this;
+      if (products.some((productInArray) => productInArray.id === product.id)) {
+        this.setState({ buttonCartText: 'Item adicionado' });
+      }
+    } catch (error) {}
+  }
   
   seeDetails() {
     localStorage.setItem('product', JSON.stringify(this.props.product));
@@ -27,7 +37,7 @@ class ProductCard extends React.Component {
         localStorage.setItem('cart', JSON.stringify(cart));
         this.setState({ buttonCartText: 'Item adicionado' });
       } else {
-        alert('Item já adicionado.');
+        alert('Item já adicionado');
       }
     } catch (error) {
       localStorage.setItem('cart', JSON.stringify([product]));
@@ -44,13 +54,13 @@ class ProductCard extends React.Component {
 
   render() {
     const {
-      props: { product: { title, thumbnail, price, id} },
+      props: { product: { title, thumbnail_id, price, id} },
       state: { buttonCartText } } = this;
 
     return (
       <div className="product-card">
         <h5 title={ title }>{ this.checkProductTitle(title) }</h5>
-        <img src={ thumbnail }/>
+        <img src={ `https://http2.mlstatic.com/D_NQ_NP_932305-${thumbnail_id}-O.webp` }/>
         <p>
           {
             (price)
@@ -75,7 +85,7 @@ ProductCard.propTypes = {
   product: PropTypes.shape({
     id: PropTypes.string,
     title: PropTypes.string,
-    thumbnail: PropTypes.string,
+    thumbnail_id: PropTypes.string,
     price: PropTypes.number,
   }).isRequired,
 }

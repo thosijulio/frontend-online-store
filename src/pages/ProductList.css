@@ -1,6 +1,6 @@
 .product-list-header {
   align-items: center;
-  background-color: #4c5760;
+  background-color: #254441;
   color: white;
   display: flex;
   height: 80px;
@@ -8,7 +8,7 @@
 }
 
 .product-list-header h1 {
-  background-color: #4c5760;
+  background-color: #254441;
   color: white;
   text-align: center;
 }
@@ -22,21 +22,21 @@
 }
 
 .product-search-section p {
-  color: #4C5760;
+  color: #254441;
   font-size: large;
   font-weight: 600;
   margin: 0 0 20px 0;
 }
 
 .product-input-search i {
-  color: #4C5760;
+  color: #254441;
   cursor: pointer;
   margin: 22px 450px 0 0;
   position: absolute;
 }
 
 .product-input-search a {
-  color: #4C5760;
+  color: #254441;
   text-decoration: inherit;
   margin: 22px 0 0 550px;
   position: absolute;
@@ -48,9 +48,10 @@
 }
 
 .input-field {
-  border: 2px solid black;
+  background-color: white;
+  border: 2px solid #254441;
   border-radius: 15px;
-  color: #4c5760;
+  color: #254441;
   font-size: large;
   font-weight: 600;
   height: 40px;
@@ -59,7 +60,7 @@
 }
 
 .input-field:hover, .input-field:focus {
-  outline: 1px solid #93A8AC;
+  outline: 1px solid #C9D1D0;
 }
 
 .product-categories-section {
@@ -69,20 +70,21 @@
 
 
 .product-categories-section label {
-  color: #4c5760;
+  color: #254441;
   font-size: large;
   font-weight: 600;
   display: block;
 }
 
 #product-categories:hover, #product-categories:focus {
-  outline: 1px solid #93A8AC;
+  outline: 1px solid #C9D1D0;
 }
 
 .product-categories-section select {
+  background-color: white;
   border-radius: 15px;
-  border: 2px solid black;
-  color: #4C5760;
+  border: 2px solid #254441;
+  color: #C9D1D0;
   font-weight: 600;
   height: 30px;
   padding: 0 3px;
@@ -90,11 +92,12 @@
 }
 
 .product-categories-section select option {
-  color: #4C5760;
+  background-color: white;
+  color: #254441;
   font-weight: 600;
 }
 .product-list-section {
-  background-color: #D7CEB2;
+  background-color: #C9D1D0;
   display: flex;
   padding: 30px 20px;
   flex-wrap: wrap;
@@ -102,7 +105,7 @@
 }
 
 .product-list-section i {
-  color: #4C5760;
+  color: #254441;
 }
 
 @media screen and (max-width: 768px) {
@@ -137,8 +140,12 @@
     padding: 0 30px;
   }
 
+  .product-categories-section select {
+    height: 20px;
+    width: 200px;
+  }
 
-  .product-search-section p {
+  .product-search-section p, .product-categories-section label {
     font-size: xx-small;
     font-weight: 500;
   }
@@ -159,14 +166,12 @@
   }
 
   .product-input-search i {
-    padding: 20px 0px;
+    margin: 12px 180px 0 0;
     font-size: medium;
   }
-}
 
-@media screen and (max-width: 300px) {
-  .product-input-search i {
-    padding: 13px 0;
-    font-size: small;
+  .product-input-search a {
+    margin: 12px 0 0 240px;
+    font-size: medium;
   }
 }

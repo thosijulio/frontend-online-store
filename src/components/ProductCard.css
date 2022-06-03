@@ -1,15 +1,16 @@
 .product-card {
   align-items: center;
-  border: 2px solid rgb(45, 50, 118);
+  background-color: white;
+  border: 2px solid #254441;
   border-radius: 20px;
-  height: 350px;
+  height: 400px;
   margin: 15px 30px;
   overflow: hidden;
   width: 200px;
 }
 
 .product-card h5 {
-  background-color: #4C5760;
+  background-color: #254441;
   color: white;
   text-align: center;
   height: 40px;
@@ -18,22 +19,30 @@
 }
 
 .product-card img {
-  margin: 20px 0;
-  width: 30%;
-  height: 30%;
+  margin: 10px 0;
+  width: 45%;
+  height: 45%;
+}
+
+.product-card p {
+  background-color: white;
+  color: #254441;
+  font-weight: 600;
 }
 
 .product-card a, .product-card button {
-  background-color: #66635B;
-  border: 0px;
+  align-items: center;
+  background-color: #254441;
+  border: none;
   border-radius: 10px;
   color: white !important;
-  display: block;
-  font-size: small;
-  font-weight: 500;
-  margin: 10px auto;
-  width: 100px;
-  padding: 10px;
-  text-decoration: inherit;
   cursor: pointer;
+  display: flex;
+  justify-content: center;
+  font-size: small;
+  font-weight: 600;
+  height: 40px;
+  margin: 10px auto;
+  text-decoration: inherit;
+  width: 130px;
 }
