@@ -1,6 +1,7 @@
 import React from 'react';
 import EmptyCart from './EmptyCart';
 import './CartItens.css';
+import { Link } from 'react-router-dom';
 
 class CartItens extends React.Component {
   constructor(props) {
@@ -84,7 +85,7 @@ class CartItens extends React.Component {
                 <img alt="product" src={`https://http2.mlstatic.com/D_NQ_NP_932305-${iten.thumbnail_id}-O.webp`} />
               </div>
               <div className="product-details">
-              <p id="product-title">{iten.title}</p>
+                <p id="product-title">{iten.title}</p>
                 <p id="product-price">
                   {`Valor: `}
                   <span>
@@ -122,6 +123,7 @@ class CartItens extends React.Component {
             </div>
           )
         )}
+        <Link>Finalizar Compra</Link>
       </section> :
       <EmptyCart />
   }
