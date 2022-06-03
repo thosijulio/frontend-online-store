@@ -30,6 +30,7 @@
 }
 
 .product-input-search i {
+  background-color: white;
   color: #254441;
   cursor: pointer;
   margin: 22px 450px 0 0;
@@ -72,9 +73,10 @@
 
 .product-categories-section label {
   color: #254441;
+  display: block;
   font-size: large;
   font-weight: 600;
-  display: block;
+  text-align: center;
 }
 
 #product-categories:hover, #product-categories:focus {
@@ -85,7 +87,7 @@
   background-color: white;
   border-radius: 15px;
   border: 2px solid #254441;
-  color: #C9D1D0;
+  color: #254441;
   font-weight: 600;
   height: 30px;
   padding: 0 3px;
