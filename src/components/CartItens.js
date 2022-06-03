@@ -1,5 +1,7 @@
 import React from 'react';
 import EmptyCart from './EmptyCart';
+import './CartItens.css';
+import { Link } from 'react-router-dom';
 
 class CartItens extends React.Component {
   constructor(props) {
@@ -75,36 +77,55 @@ class CartItens extends React.Component {
   render() {
     const { state: { cart } } = this;
 
-    return cart.length ? cart.map((iten, index) => (
-        <div key={ index }>
-          <img alt="product" src={iten.thumbnail} />
-          <p>{iten.title}</p>
-          <p>
-            {
-              (iten.price)
-                .toLocaleString('pt-br', {style: 'currency', currency: 'BRL'})
-            }
-          </p>
-          <p>Qtde.</p>
-          <i
-            className="fa-solid fa-minus"
-            onClick={ () => this.handleQuantity(cart, iten, 'minus') }
-          />
-          <p>{ iten.quantity }</p>
-          <i
-            className="fa-solid fa-plus"
-            onClick={ () => this.handleQuantity(cart, iten, 'plus') }
-          />
-          <p>
-            {
-              `Valor total: ${(iten.totalPrice)
-                .toLocaleString('pt-br', {style: 'currency', currency: 'BRL'})}`
-            }
-          </p>
-          <i className="fa-solid fa-trash" onClick={ () => this.handleRemove(iten) }/>
-        </div>
-      )
-    ) : <EmptyCart />
+    return cart.length ?
+      <section className="cart-itens-section">
+        { cart.map((iten, index) => (
+            <div className="cart-iten-card" key={ index }>
+              <div className="product-image">
+                <img alt="product" src={`https://http2.mlstatic.com/D_NQ_NP_932305-${iten.thumbnail_id}-O.webp`} />
+              </div>
+              <div className="product-details">
+                <p id="product-title">{iten.title}</p>
+                <p id="product-price">
+                  {`Valor: `}
+                  <span>
+                    {
+                      (iten.price)
+                        .toLocaleString('pt-br', {style: 'currency', currency: 'BRL'})
+                    }
+                  </span>
+                </p>
+                <div className="product-quantity">
+                  <p id="quantity-text">Quantidade:</p>
+                  <i
+                    className="fa-solid fa-minus"
+                    onClick={ () => this.handleQuantity(cart, iten, 'minus') }
+                    title="Diminuir quantidade"
+                  />
+                  <p>{ iten.quantity }</p>
+                  <i
+                    className="fa-solid fa-plus"
+                    onClick={ () => this.handleQuantity(cart, iten, 'plus') }
+                    title="Aumentar quantidade"
+                  />
+                </div>
+                <p id="product-total-price">
+                  {`Valor total: `}
+                  <span>
+                    {
+                      (iten.totalPrice)
+                        .toLocaleString('pt-br', {style: 'currency', currency: 'BRL'})
+                    }
+                  </span>
+                </p>
+                <i className="fa-solid fa-trash" onClick={ () => this.handleRemove(iten) } title="Excluir pedido" />
+              </div>
+            </div>
+          )
+        )}
+        <Link>Finalizar Compra</Link>
+      </section> :
+      <EmptyCart />
   }
 }
 

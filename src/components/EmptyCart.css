@@ -1,0 +1,9 @@
+.fa-box-open {
+  color: #254441;
+}
+
+.fa-box-open + p {
+  color: #254441;
+  font-size: larger;
+  font-weight: 600;
+}

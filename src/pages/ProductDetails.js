@@ -32,7 +32,7 @@ class ProductDetails extends React.Component {
               </h5>
               <ul>
                 { product.attributes.map((attribute, index) => (
-                  <li key={ index }>{`${attribute.name}: ${attribute.value_name}`}</li>
+                  <li key={ index }><span>{`${attribute.name}: `}</span>{`${attribute.value_name}`}</li>
                 ))}
               </ul>
             </div>
