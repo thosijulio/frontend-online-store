@@ -123,7 +123,7 @@ class CartItens extends React.Component {
             </div>
           )
         )}
-        <Link>Finalizar Compra</Link>
+        <Link to="/checkout">Finalizar Compra</Link>
       </section> :
       <EmptyCart />
   }
