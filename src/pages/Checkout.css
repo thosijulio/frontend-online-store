@@ -1,0 +1,108 @@
+.checkout-header {
+  align-items: center;
+  background-color: #254441;
+  display: flex;
+  justify-content: space-between;
+  height: 80px;
+  margin-bottom: 50px;
+  padding: 20px;
+}
+
+.checkout-header div h2, .checkout-header a {
+  background-color: #254441;
+  color: white;
+}
+
+.checkout-header a {
+  text-decoration: inherit;
+}
+
+.checkout-section {
+  background-color: #E4E8E8;
+  border: 3px solid #254441;
+  border-radius: 15px;
+  margin: 0 20px;
+  padding: 15px;
+  text-align: center;
+}
+
+.checkout-section form {
+  background-color: #E4E8E8;
+}
+
+.checkout-section section h4 {
+  background-color: #E4E8E8;
+  color: #254441;
+  font-size: x-large;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+.delivery-address-section {
+  background-color: #E4E8E8;
+  margin-bottom: 50px;
+}
+
+.delivery-address-section form label, .payment-method-section form label {
+  background-color: #E4E8E8;
+  color: #254441;
+  display: inline-block;
+  font-size: large;
+  font-weight: 500;
+  margin: 15px 20px;
+}
+
+.delivery-address-section form input {
+  background-color: #fff;
+  border: 3px solid #254441;
+  border-radius: 15px;
+  color: #254441;
+  font-size: large;
+  font-weight: 500;
+  height: 15px;
+  padding: 5px 10px;
+}
+
+#cpf {
+  width: 150px;
+}
+
+#number {
+  width: 80px;
+}
+
+#cep {
+  width: 110px;
+}
+
+.payment-method-section {
+  background-color: #E4E8E8;
+}
+
+.payment-method-section form label i {
+  background-color: #E4E8E8;
+  display: block;
+}
+
+.payment-method-section form label input {
+  height: 20px;
+  margin-top: 15px;
+  width: 30px;
+}
+
+.payment-method-section form label input:checked {
+  accent-color: #254441;
+}
+
+.checkout-section a {
+  background-color: #254441;
+  border-radius: 15px;
+  color: #fff;
+  display: block;
+  font-size: large;
+  font-weight: 600;
+  margin: 30px auto;
+  padding: 10px;
+  text-decoration: inherit;
+  width: 200px;
+}
