@@ -17,17 +17,34 @@ class Checkout extends React.Component {
       state: '',
       cep: '',
       paymentMethod: 'ticket',
+      isCompletedForm: false,
     };
 
     this.handleForm = this.handleForm.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   handleForm(target) {
+    const { state } = this;
     const { name, value } = target;
-    console.log(name, value);
     this.setState({
       [name]: value,
     });
+    if (!Object.keys(state).some((key) => key === 'isCompletedForm' ? false : !this.state[key])) {
+      this.setState({ isCompletedForm: true });
+    }
+  }
+
+  handleSubmit() {
+    const { state: { isCompletedForm, ...clientInfo } } = this;
+    const cart = JSON.parse(localStorage.getItem('cart'));
+
+    if (isCompletedForm) {
+      localStorage.setItem('order', JSON.stringify({ clientInfo, cart }));
+      localStorage.removeItem('cart');
+    } else {
+      alert('Preencher todo o formulário');
+    }
   }
 
   render() {
@@ -43,6 +60,7 @@ class Checkout extends React.Component {
         city,
         state,
         cep,
+        isCompletedForm,
       } } = this;
 
     return (
@@ -111,7 +129,7 @@ class Checkout extends React.Component {
               </label>
             </form>
           </section>
-          <Link to="/">Finalizar Compra</Link>
+          <Link onClick={ this.handleSubmit } to={ isCompletedForm ? "/" : "#" }>Finalizar Compra</Link>
         </section>
       </>
     )
