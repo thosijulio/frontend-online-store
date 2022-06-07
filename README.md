@@ -14,7 +14,7 @@
 
 ## O que foi desenvolvido
 
-Criação de uma página que consuma a API do mercado Livre, mostre os produtos pesquisados e realize uma simulação de um processo de compra.
+Criação de uma loja online simplificada, que consuma a API do mercado livre (https://developers.mercadolivre.com.br/pt_br/api-docs-pt-br), mostre os produtos pesquisados e realize uma simulação de um processo de compra.
 
 ---
 
@@ -98,15 +98,4 @@ Caso surga alguma dúvida, comentário ou sugestão sobre o projeto, não hesite
 Linkedin:<a href="https://www.linkedin.com/in/thosijulio/" target="blank"><img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/linkedin.svg" alt="thosijulio" height="20" width="20" /></a>
 Github:<a href="https://www.github.com/thosijulio/" target="blank"><img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/github.svg" alt="thosijulio" height="20" width="20" /></a>
 Instagram:<a href="https://www.instagram.com/thosijulio" target="blank"><img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/instagram.svg" alt="thosijulio" height="20" width="20" /></a>
-</p>
-
-# frontend-online-store
-Versão simplificada de uma loja online (sem persistência com um banco de dados)
-
-
-<h3 align=center>Me encontre:</h3>
-<p align=center>
-<a href="https://www.linkedin.com/in/thosijulio/" target="blank"><img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/linkedin.svg" alt="thosijulio" height="20" width="20" /></a>
-<a href="https://www.github.com/thosijulio/" target="blank"><img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/github.svg" alt="thosijulio" height="20" width="20" /></a>
-<a href="https://www.instagram.com/thosijulio" target="blank"><img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/instagram.svg" alt="thosijulio" height="20" width="20" /></a>
 </p>
